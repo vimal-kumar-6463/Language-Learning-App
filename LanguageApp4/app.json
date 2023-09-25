@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "LanguageApp",
+    "slug": "LanguageApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.buggynerdy.LanguageApp"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "@config-plugins/react-native-blob-util",
+        "@config-plugins/react-native-pdf"
+      ],
+      [
+        "@react-native-voice/voice",
+        {
+          "microphonePermission": "Allow Voice to Text Tutorial to access the microphone",
+          "speechRecognitionPermission": "Allow Voice to Text Tutorial to securely recognize user speech"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "67bddf16-e6c9-41b9-8efc-549169c5dd0b"
+      }
+    }
+  }
+}
